@@ -1,0 +1,89 @@
+{
+  "session_id": "20261108-165024",
+  "env_fingerprint": "py313-torch2.11.0-cu130-abi1",
+  "mamba_kernels_ok": true,
+  "transformers": "5.22.2",
+  "peft": "0.21.2",
+  "torch": "2.11.0+cu130",
+  "gpus": [
+    "Tesla T4",
+    "Tesla T4"
+  ],
+  "dtype": "float16",
+  "tokenizer": {
+    "eos_id": 100257,
+    "pad_id": 100256,
+    "eos_token": "<|end_of_text|>",
+    "pad_token": "<|pad|>",
+    "first_prompt_first_token_ids": [
+      14924,
+      25,
+      25937,
+      323,
+      32320,
+      527
+    ]
+  },
+  "config": {
+    "BASE_MODEL": "ibm-granite/granite-4.0-h-1b-base",
+    "ADAPTER_REPO": "pmrccs/granite-4.0-h-1b-math-sft-lora-v1",
+    "ADAPTER_SUBFOLDER": "",
+    "ADAPTER_TAG": "final",
+    "BENCHMARKS": [
+      "gsm8k",
+      "minerva_math"
+    ],
+    "PROMPT_MODES": [
+      "fewshot",
+      "sft_template"
+    ],
+    "SAMPLE_LIMIT": {
+      "gsm8k": 0,
+      "minerva_math": 0
+    },
+    "GSM8K_NUM_FEWSHOT": 8,
+    "GSM8K_FEWSHOT_SEED": 1234,
+    "SFT_PROMPT_TEMPLATE": "### Problem:\n{problem}\n\n### Solution:\n",
+    "MATH_DATASET": "EleutherAI/hendrycks_math",
+    "MATH_SUBJECTS": [
+      "algebra",
+      "counting_and_probability",
+      "geometry",
+      "intermediate_algebra",
+      "number_theory",
+      "prealgebra",
+      "precalculus"
+    ],
+    "MATH_SPLIT": "test",
+    "MAX_NEW_TOKENS": {
+      "gsm8k": 512,
+      "minerva_math": 1024
+    },
+    "STOP_STRINGS": {
+      "gsm8k/fewshot": [
+        "Question:",
+        "</s>",
+        "<|im_end|>"
+      ],
+      "minerva_math/fewshot": [
+        "Problem:"
+      ],
+      "gsm8k/sft_template": [
+        "### Problem:"
+      ],
+      "minerva_math/sft_template": [
+        "### Problem:"
+      ]
+    },
+    "DO_SAMPLE": false,
+    "BATCH_SIZE_PER_GPU": 16,
+    "CHUNK_SIZE": 250,
+    "SAVE_TOKEN_IDS": false,
+    "TEST_RUN": true,
+    "PAD_TO_MULTIPLE": 8,
+    "MATH_DATASET_FALLBACKS": [
+      "JeremiahZ/hendrycks_math_merged"
+    ]
+  },
+  "padding_check": {}
+}
