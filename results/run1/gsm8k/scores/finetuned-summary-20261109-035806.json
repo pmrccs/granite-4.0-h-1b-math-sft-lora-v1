@@ -1,0 +1,144 @@
+{
+ "variant": "finetuned",
+ "setting": "zero-shot, training prompt template, greedy decoding, max_new_tokens 1024",
+ "answer_rule": "last \\boxed{} -> first number after 'Answer:' -> last number in text; outputs cut off at the token limit only via a closed \\boxed{}",
+ "problems": 1319,
+ "correct": 982,
+ "accuracy": 0.7445,
+ "ci95": [
+  0.7203,
+  0.7673
+ ],
+ "strict_correct": 982,
+ "strict_accuracy": 0.7445,
+ "strict_ci95": [
+  0.7203,
+  0.7673
+ ],
+ "by_answer_source": {
+  "boxed": {
+   "problems": 1301,
+   "correct": 982
+  },
+  "none": {
+   "problems": 18,
+   "correct": 0
+  }
+ },
+ "no_answer": 18,
+ "wrong_number": 319,
+ "by_stop_reason": {
+  "eos": {
+   "problems": 1301,
+   "correct": 982
+  },
+  "max_tokens": {
+   "problems": 18,
+   "correct": 0
+  }
+ },
+ "structure_ok": 0.9864,
+ "exactly_one_boxed": 0.981,
+ "mean_gen_tokens": 160.0,
+ "mean_prompt_tokens": 65.0,
+ "speed_per_gpu": {
+  "prompt_tok_s": 716.0,
+  "gen_tok_s": 148.9
+ },
+ "by_gpu": {
+  "0": {
+   "prompt_tok_s": 789.6,
+   "gen_tok_s": 142.3
+  },
+  "1": {
+   "prompt_tok_s": 661.4,
+   "gen_tok_s": 155.6
+  }
+ },
+ "generation_sessions": [
+  {
+   "SESSION_ID": "20261108-191345",
+   "TEST_RUN": false,
+   "TEST_N": 128,
+   "TEST_UPLOAD_EVERY": 40,
+   "VARIANTS": [
+    "finetuned"
+   ],
+   "BASE_MODEL": "ibm-granite/granite-4.0-h-1b-base",
+   "ADAPTER_REPO": "pmrccs/granite-4.0-h-1b-math-sft-lora-v1",
+   "BENCH_REPO": "openai/gsm8k",
+   "BENCH_CONFIG": "main",
+   "PROMPT_TEMPLATE": "### Problem:\n{problem}\n\n### Solution:\n",
+   "STOP_STRING": "### Problem:",
+   "BATCH_SIZE": 32,
+   "MAX_NEW_TOKENS": 1024,
+   "DTYPE": "float16",
+   "NUM_GPUS": 0,
+   "HF_SECRET_NAME": "HF_TOKEN",
+   "GH_SECRET_NAME": "GITHUB_TOKEN",
+   "GITHUB_REPO": "granite-4.0-h-1b-math-sft-lora-v1",
+   "GITHUB_PRIVATE": true,
+   "RUN_NAME": "run1",
+   "UPLOAD_EVERY": 100,
+   "TORCH_EXPECTED": "2.11.0",
+   "PINS": {
+    "transformers": "5.17.0",
+    "peft": "0.21.2",
+    "torchao": "0.18.0",
+    "einops": "0.8.1"
+   },
+   "WHEELHOUSE_REPO": "pmrccs/kaggle-wheelhouse",
+   "MAMBA_WHEEL_FOLDER": "py313-torch2.11.0-cu130-abi1-sm75",
+   "POLL_S": 5,
+   "READY_TIMEOUT_S": 900,
+   "STALL_TIMEOUT_S": 900,
+   "RETRIES": 3,
+   "N_ITEMS": 0,
+   "RESULTS_ROOT": "results/run1",
+   "WORK_DIR": "/kaggle/working/bench",
+   "WORKER_PATH": "/kaggle/working/worker.py"
+  },
+  {
+   "SESSION_ID": "20261109-023658",
+   "TEST_RUN": false,
+   "TEST_N": 128,
+   "TEST_UPLOAD_EVERY": 40,
+   "VARIANTS": [
+    "base"
+   ],
+   "BASE_MODEL": "ibm-granite/granite-4.0-h-1b-base",
+   "ADAPTER_REPO": "pmrccs/granite-4.0-h-1b-math-sft-lora-v1",
+   "BENCH_REPO": "openai/gsm8k",
+   "BENCH_CONFIG": "main",
+   "PROMPT_TEMPLATE": "### Problem:\n{problem}\n\n### Solution:\n",
+   "STOP_STRING": "### Problem:",
+   "BATCH_SIZE": 32,
+   "MAX_NEW_TOKENS": 1024,
+   "DTYPE": "float16",
+   "NUM_GPUS": 0,
+   "HF_SECRET_NAME": "HF_TOKEN",
+   "GH_SECRET_NAME": "GITHUB_TOKEN",
+   "GITHUB_REPO": "granite-4.0-h-1b-math-sft-lora-v1",
+   "GITHUB_PRIVATE": true,
+   "RUN_NAME": "run1",
+   "UPLOAD_EVERY": 100,
+   "TORCH_EXPECTED": "2.11.0",
+   "PINS": {
+    "transformers": "5.17.0",
+    "peft": "0.21.2",
+    "torchao": "0.18.0",
+    "einops": "0.8.1"
+   },
+   "WHEELHOUSE_REPO": "pmrccs/kaggle-wheelhouse",
+   "MAMBA_WHEEL_FOLDER": "py313-torch2.11.0-cu130-abi1-sm75",
+   "POLL_S": 5,
+   "READY_TIMEOUT_S": 900,
+   "STALL_TIMEOUT_S": 900,
+   "RETRIES": 3,
+   "N_ITEMS": 0,
+   "RESULTS_ROOT": "results/run1",
+   "WORK_DIR": "/kaggle/working/bench",
+   "WORKER_PATH": "/kaggle/working/worker.py"
+  }
+ ]
+}
