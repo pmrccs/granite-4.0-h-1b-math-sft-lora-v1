@@ -1,0 +1,64 @@
+{
+ "SESSION_ID": "20261109-090619",
+ "TEST_RUN": true,
+ "TEST_N": 64,
+ "TEST_UPLOAD_EVERY": 20,
+ "VARIANTS": [
+  "finetuned",
+  "base"
+ ],
+ "BASE_MODEL": "ibm-granite/granite-4.0-h-1b-base",
+ "ADAPTER_REPO": "pmrccs/granite-4.0-h-1b-math-sft-lora-v1",
+ "BENCHMARKS": [
+  "minerva_math",
+  "svamp"
+ ],
+ "BENCH_SPECS": {
+  "minerva_math": {
+   "repo": "zkshan2002/minerva_math",
+   "n": 272,
+   "problem": [
+    "problem"
+   ],
+   "answer": "answer"
+  },
+  "svamp": {
+   "repo": "ChilleD/SVAMP",
+   "n": 300,
+   "problem": [
+    "Body",
+    "Question"
+   ],
+   "answer": "Answer"
+  }
+ },
+ "PROMPT_TEMPLATE": "### Problem:\n{problem}\n\n### Solution:\n",
+ "STOP_STRING": "### Problem:",
+ "BATCH_SIZE": 16,
+ "MAX_NEW_TOKENS": 1024,
+ "DTYPE": "float16",
+ "NUM_GPUS": 0,
+ "HF_SECRET_NAME": "HF_TOKEN",
+ "GH_SECRET_NAME": "GITHUB_TOKEN",
+ "GITHUB_REPO": "granite-4.0-h-1b-math-sft-lora-v1",
+ "GITHUB_PRIVATE": true,
+ "RUN_NAME": "run1",
+ "UPLOAD_EVERY": 20,
+ "TORCH_EXPECTED": "2.11.0",
+ "PINS": {
+  "transformers": "5.17.0",
+  "peft": "0.21.2",
+  "torchao": "0.18.0",
+  "einops": "0.8.1"
+ },
+ "WHEELHOUSE_REPO": "pmrccs/kaggle-wheelhouse",
+ "MAMBA_WHEEL_FOLDER": "py313-torch2.11.0-cu130-abi1-sm75",
+ "POLL_S": 5,
+ "READY_TIMEOUT_S": 900,
+ "STALL_TIMEOUT_S": 900,
+ "RETRIES": 3,
+ "N_ITEMS": 64,
+ "RESULTS_ROOT": "test_runs/20261109-090619",
+ "WORK_DIR": "/kaggle/working/bench_test",
+ "WORKER_PATH": "/kaggle/working/worker.py"
+}
