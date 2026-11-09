@@ -1,0 +1,124 @@
+{
+ "base": {
+  "problems": 1319,
+  "stop_reasons": {
+   "eos": 1288,
+   "max_tokens": 25,
+   "stop_string": 6
+  },
+  "structure_ok": 0.044,
+  "has_boxed": 0.044,
+  "exactly_one_boxed": 0.044,
+  "mean_gen_tokens": 223.3,
+  "speed_per_gpu": {
+   "prompt_tok_s": 88.4,
+   "gen_tok_s": 174.8
+  },
+  "by_gpu": {
+   "0": {
+    "batches": 20,
+    "problems": 640,
+    "prompt_tok_s": 85.4,
+    "gen_tok_s": 175.0
+   },
+   "1": {
+    "batches": 22,
+    "problems": 679,
+    "prompt_tok_s": 91.3,
+    "gen_tok_s": 174.6
+   }
+  },
+  "workers": [
+   {
+    "gpu": 0,
+    "name": "Tesla T4",
+    "uuid": "45670493-2d1c-daa0-f1cc-ac84ef6d01f6",
+    "batches": [
+     0,
+     3,
+     5,
+     8,
+     11,
+     12,
+     14,
+     16,
+     18,
+     20,
+     22,
+     24,
+     27,
+     28,
+     30,
+     32,
+     35,
+     36,
+     38,
+     40
+    ],
+    "items": 640,
+    "busy_s": 1305.7,
+    "t_begin": 1794191919.4970014,
+    "t_end": 1794193225.545317,
+    "peak_mem_gb": 5.35,
+    "fast_path": true,
+    "fast_path_src": "import-check",
+    "versions": {
+     "torch": "2.11.0",
+     "transformers": "5.17.0",
+     "peft": "0.21.2",
+     "torchao": "0.18.0",
+     "einops": "0.8.1",
+     "mamba_ssm": "2.3.1",
+     "causal_conv1d": "1.7.0"
+    }
+   },
+   {
+    "gpu": 1,
+    "name": "Tesla T4",
+    "uuid": "df29fdd3-2013-ce4c-35df-247672d127c1",
+    "batches": [
+     1,
+     2,
+     4,
+     6,
+     7,
+     9,
+     10,
+     13,
+     15,
+     17,
+     19,
+     21,
+     23,
+     25,
+     26,
+     29,
+     31,
+     33,
+     34,
+     37,
+     39,
+     41
+    ],
+    "items": 679,
+    "busy_s": 1342.0,
+    "t_begin": 1794191920.4890227,
+    "t_end": 1794193262.8732274,
+    "peak_mem_gb": 5.32,
+    "fast_path": true,
+    "fast_path_src": "import-check",
+    "versions": {
+     "torch": "2.11.0",
+     "transformers": "5.17.0",
+     "peft": "0.21.2",
+     "torchao": "0.18.0",
+     "einops": "0.8.1",
+     "mamba_ssm": "2.3.1",
+     "causal_conv1d": "1.7.0"
+    }
+   }
+  ],
+  "generation_wall_s": 1343.4,
+  "idle_tail_s": 37.3
+ }
+}
