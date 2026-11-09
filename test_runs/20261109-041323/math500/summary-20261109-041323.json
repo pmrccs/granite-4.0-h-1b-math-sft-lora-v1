@@ -1,0 +1,169 @@
+{
+ "finetuned": {
+  "problems": 64,
+  "stop_reasons": {
+   "eos": 55,
+   "max_tokens": 9
+  },
+  "structure_ok": 0.8594,
+  "has_boxed": 0.8594,
+  "exactly_one_boxed": 0.6562,
+  "mean_gen_tokens": 371.0,
+  "speed_per_gpu": {
+   "prompt_tok_s": 150.5,
+   "gen_tok_s": 88.2
+  },
+  "by_gpu": {
+   "0": {
+    "batches": 1,
+    "problems": 16,
+    "prompt_tok_s": 387.9,
+    "gen_tok_s": 114.2
+   },
+   "1": {
+    "batches": 1,
+    "problems": 16,
+    "prompt_tok_s": 101.7,
+    "gen_tok_s": 71.7
+   }
+  },
+  "workers": [
+   {
+    "gpu": 0,
+    "name": "Tesla T4",
+    "uuid": "1e8fd262-512b-5757-d786-dbc0ede24d09",
+    "batches": [
+     0,
+     3
+    ],
+    "items": 32,
+    "busy_s": 514.1,
+    "t_begin": 1794197697.6392512,
+    "t_end": 1794198211.7958844,
+    "peak_mem_gb": 4.92,
+    "fast_path": true,
+    "fast_path_src": "import-check",
+    "versions": {
+     "torch": "2.11.0",
+     "transformers": "5.17.0",
+     "peft": "0.21.2",
+     "torchao": "0.18.0",
+     "einops": "0.8.1",
+     "mamba_ssm": "2.3.1",
+     "causal_conv1d": "1.7.0"
+    }
+   },
+   {
+    "gpu": 1,
+    "name": "Tesla T4",
+    "uuid": "84c4e2a4-9a64-9c38-6f44-f4c6c9b877ec",
+    "batches": [
+     1,
+     2
+    ],
+    "items": 32,
+    "busy_s": 534.0,
+    "t_begin": 1794197698.637127,
+    "t_end": 1794198232.6991405,
+    "peak_mem_gb": 4.18,
+    "fast_path": true,
+    "fast_path_src": "import-check",
+    "versions": {
+     "torch": "2.11.0",
+     "transformers": "5.17.0",
+     "peft": "0.21.2",
+     "torchao": "0.18.0",
+     "einops": "0.8.1",
+     "mamba_ssm": "2.3.1",
+     "causal_conv1d": "1.7.0"
+    }
+   }
+  ],
+  "generation_wall_s": 535.1,
+  "idle_tail_s": 20.9
+ },
+ "base": {
+  "problems": 64,
+  "stop_reasons": {
+   "eos": 53,
+   "max_tokens": 9,
+   "stop_string": 2
+  },
+  "structure_ok": 0.5156,
+  "has_boxed": 0.5156,
+  "exactly_one_boxed": 0.5,
+  "mean_gen_tokens": 441.5,
+  "speed_per_gpu": {
+   "prompt_tok_s": 187.2,
+   "gen_tok_s": 101.2
+  },
+  "by_gpu": {
+   "0": {
+    "batches": 1,
+    "problems": 16,
+    "prompt_tok_s": 417.3,
+    "gen_tok_s": 91.0
+   },
+   "1": {
+    "batches": 1,
+    "problems": 16,
+    "prompt_tok_s": 130.7,
+    "gen_tok_s": 110.9
+   }
+  },
+  "workers": [
+   {
+    "gpu": 0,
+    "name": "Tesla T4",
+    "uuid": "1e8fd262-512b-5757-d786-dbc0ede24d09",
+    "batches": [
+     0,
+     3
+    ],
+    "items": 32,
+    "busy_s": 155.5,
+    "t_begin": 1794198250.8489482,
+    "t_end": 1794198406.4390051,
+    "peak_mem_gb": 4.87,
+    "fast_path": true,
+    "fast_path_src": "import-check",
+    "versions": {
+     "torch": "2.11.0",
+     "transformers": "5.17.0",
+     "peft": "0.21.2",
+     "torchao": "0.18.0",
+     "einops": "0.8.1",
+     "mamba_ssm": "2.3.1",
+     "causal_conv1d": "1.7.0"
+    }
+   },
+   {
+    "gpu": 1,
+    "name": "Tesla T4",
+    "uuid": "84c4e2a4-9a64-9c38-6f44-f4c6c9b877ec",
+    "batches": [
+     1,
+     2
+    ],
+    "items": 32,
+    "busy_s": 135.7,
+    "t_begin": 1794198251.7983468,
+    "t_end": 1794198387.5572696,
+    "peak_mem_gb": 4.13,
+    "fast_path": true,
+    "fast_path_src": "import-check",
+    "versions": {
+     "torch": "2.11.0",
+     "transformers": "5.17.0",
+     "peft": "0.21.2",
+     "torchao": "0.18.0",
+     "einops": "0.8.1",
+     "mamba_ssm": "2.3.1",
+     "causal_conv1d": "1.7.0"
+    }
+   }
+  ],
+  "generation_wall_s": 155.6,
+  "idle_tail_s": 18.9
+ }
+}
