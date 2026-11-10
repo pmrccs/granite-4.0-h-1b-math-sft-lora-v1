@@ -1,0 +1,8 @@
+{
+ "finetuned_only_correct": 37,
+ "base_only_correct": 20,
+ "both_correct": 214,
+ "neither": 29,
+ "difference_points": 5.67,
+ "sign_test_p": 0.033143967787505446
+}
